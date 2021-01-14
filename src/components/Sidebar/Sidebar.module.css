@@ -1,0 +1,12 @@
+.container{
+    width: 365px;
+    height: 1000px;
+    background-color:#F8F8FA;
+}
+.item{
+    padding-top: 72px;
+    padding-left: 122px;
+}
+.a{
+    padding-bottom: 30px;
+}
