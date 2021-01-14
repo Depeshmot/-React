@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
-import SideBar from './components/Sidebar';
-import Header from './components/Header';
-import MainContent from './components/Maincontent';
+import SideBar from './components/Sidebar/Sidebar.jsx';
+import MainContent from './components/Maincontant/Maincontent.jsx';
+
 
 // function App() {
 //   return ( // JSX разметка - это HTML встроенный в Javascript
@@ -27,8 +27,7 @@ import MainContent from './components/Maincontent';
 
 const App = () => {
   return(
-    <div>
-      <Header/>
+    <div className='main-contant'>
       <SideBar/>
       <MainContent/>
     </div>
