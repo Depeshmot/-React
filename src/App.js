@@ -1,36 +1,26 @@
 import React from 'react';
 import './App.css';
 import SideBar from './components/Sidebar/Sidebar.jsx';
-import MainContent from './components/Maincontant/Maincontent.jsx';
-
-
-// function App() {
-//   return ( // JSX разметка - это HTML встроенный в Javascript
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           My fuckin new app<code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
+import { BrowserRouter, Route } from 'react-router-dom';
+import Profile from './components/Profile/Profile';
+import Dialogs from './components/Dialogs/Dialogs';
+import News from './components/News/News';
+import Music from './components/Music/Music';
+import Settings from './components/Settings/Settings';
 
 const App = () => {
   return(
-    <div className='main-contant'>
+    <BrowserRouter>
+    <div className='main-container'>
       <SideBar/>
-      <MainContent/>
+      <Route path='/profile' component={Profile}/>
+      <Route path='/dialogs' component={Dialogs}/>
+      <Route path='/news' component={News}/>
+      <Route path='/music' component={Music}/>
+      <Route path='/settings' component={Settings}/>
     </div>
+    </BrowserRouter>
+
   );
 }
 

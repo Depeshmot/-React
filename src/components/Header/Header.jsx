@@ -1,8 +1,9 @@
 import React from 'react';
+import style from '../Header/Header.module.css';
 
 const Header = () => {
     return(
-        <div className='header-container'>
+        <div className={style.container}>
             <div className='header__items'>
                 <nav className='menu'>
                     <h2>Header</h2>

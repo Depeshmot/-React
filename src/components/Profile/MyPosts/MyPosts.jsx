@@ -11,7 +11,7 @@ function MyPosts() {
                 <button>Add post</button>
             </div>
             <div className={style.posts}>
-                <Post/>
+                <Post name='Ivan' age='30'/>
                 <Post/>
                 <Post/>
             </div>

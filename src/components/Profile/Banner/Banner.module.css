@@ -1,0 +1,23 @@
+.container{
+    padding-left: 34px;
+}
+
+.img {
+    width: 919px;
+    height: 189px;
+    padding: 700px;
+    margin: 0;
+}
+
+.banner {
+    width: 919px;
+    height: 189px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.banner > img {
+    display: block;
+    margin-top: -550px;
+    margin-left: -100px;
+}
+
