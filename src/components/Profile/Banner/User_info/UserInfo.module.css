@@ -1,0 +1,18 @@
+.container{
+    padding-left: 30px;
+}
+
+.flex_container{
+    display: flex;
+    color: #ffffff;
+}
+
+.title{
+    font-size: 24px;
+    color: #ffffff;
+    padding-bottom: 10px;
+}
+
+.followers{
+    padding-left: 20px;
+}

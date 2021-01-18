@@ -13,11 +13,11 @@ const App = () => {
     <BrowserRouter>
     <div className='main-container'>
       <SideBar/>
-      <Route path='/profile' component={Profile}/>
-      <Route path='/dialogs' component={Dialogs}/>
-      <Route path='/news' component={News}/>
-      <Route path='/music' component={Music}/>
-      <Route path='/settings' component={Settings}/>
+      <Route  path='/profile' component={Profile}/>
+      <Route  path='/dialogs' component={Dialogs}/>
+      <Route  path='/news' component={News}/>
+      <Route  path='/music' component={Music}/>
+      <Route  path='/settings' component={Settings}/>
     </div>
     </BrowserRouter>
 

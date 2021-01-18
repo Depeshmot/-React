@@ -1,5 +1,8 @@
-.container{
+.container {
+    padding-top: 40px;
     padding-left: 34px;
+    width: 919px;
+    height: 189px;
 }
 
 .img {
@@ -14,10 +17,30 @@
     height: 189px;
     border-radius: 20px;
     overflow: hidden;
+    position: absolute;
 }
 .banner > img {
     display: block;
     margin-top: -550px;
     margin-left: -100px;
+}
+
+/* .avatar_icon {
+    padding-top: 46px;
+    padding-left: 37px;
+    position: relative;
+} */
+
+/* .user_info{
+    padding-top: px;
+    padding-left: 37px;
+    position: relative;
+} */
+
+.user_info_container{
+    padding-top: 46px;
+    padding-left: 37px;
+    position: relative;
+    display: flex;
 }
 

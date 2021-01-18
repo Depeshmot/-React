@@ -1,0 +1,32 @@
+.container {
+    padding-top: 30px;
+    padding-left: 37px;
+    width: 920px;
+    height: 200px;
+}
+
+
+textarea {
+    width: 885px;
+    resize: vertical;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: #f8f8fa;
+    border: 0;
+    height: 50px;
+}
+
+button {
+    /* remove default behavior */
+    appearance: none;
+    float: right;
+    /* usual styles */
+    padding: 10px;
+    border: none;
+    background-color: #3f51b5;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 5px;
+    width: 137px;
+    height: 41px;
+}

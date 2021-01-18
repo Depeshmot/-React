@@ -1,21 +1,16 @@
 import React from 'react';
 import style from '../MyPosts/MyPosts.module.css';
-import Post from '../MyPosts/Post/Post';
 
 function MyPosts() {
     return (
         <div className={style.container}>
-            My posts
-            <div>
-                <textarea></textarea>
+            <h2>My Posts</h2>
+            <div className={style.textarea}>
+                <textarea placeholder="What's new...?"></textarea>
                 <button>Add post</button>
             </div>
-            <div className={style.posts}>
-                <Post name='Ivan' age='30'/>
-                <Post/>
-                <Post/>
-            </div>
         </div>
+        
 
     );
 }

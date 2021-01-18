@@ -2,12 +2,15 @@ import React from 'react';
 import style from '../Header/Header.module.css';
 
 const Header = () => {
-    return(
+    return (
         <div className={style.container}>
-            <div className='header__items'>
-                <nav className='menu'>
-                    <h2>Header</h2>
-                </nav>
+            <div className={style.header__items}>
+                <div>
+                    <form>
+                        <input  placeholder="Искать здесь..."/>
+                            <button></button>
+                    </form>
+                </div>
             </div>
         </div>
     );
