@@ -4,13 +4,8 @@ import style from '../Post/Post.module.css';
 const Post = (props) => {
     return(
         <div className={style.container}>
-            
-            <ul>
-                <li>User Name</li>
-                <li>User Email</li>
-                <li>User Information</li>
-            </ul>
-            {props.name} {props.age}
+            <h2>Fuck you</h2>
+            {props.message}
         </div>
     );
 }
