@@ -1,36 +1,22 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import style from '../Dialogs/Dialogs.module.css';
-import DialogItem from '../Dialogs/DialogItem/DialogItem.jsx';
-import Message from '../Dialogs/Message/Message.jsx';
-import { updateNewMessageBodyCreator, sendMessageCreator } from '../../redux/state.js';
+import Dialog from './Dialog/Dialog';
 
-const Dialogs = (props) => {
 
-    let state = props.store.getState().messegePage;
 
-    let dialogsElements = state.dialogsData.map( dialogsData => <DialogItem name={dialogsData.name} id={dialogsData.id}/>);
-    let messagesElements = state.messageData.map( messageData => <Message message={messageData.message}/>);
-    let newMessageBody = state.newMessageBody;
-
-    let onSendMessageClick = () => {
-        props.store.dispatch( sendMessageCreator() );
-    }
-
-    let onNewMessageChange = (event) => {
-        let body = event.target.value;
-        props.store.dispatch( updateNewMessageBodyCreator(body) );
-    }
-
+const Dialogs = () => {
     return (
         <div className={style.container}>
             <div className={style.items}>
-                {dialogsElements}
-            </div>
-            <div className={style.messages}>
-                <div> {messagesElements}</div>
-                <div>
-                    <div><textarea value={newMessageBody} onChange={onNewMessageChange} placeholder='Enter your message'></textarea></div>
-                    <div><button onClick={onSendMessageClick}>send</button></div>
+                <div className={style.item}>
+                    <NavLink style={{ textDecoration: 'none' }} to='/dialog/1'><Dialog  id='1' /></NavLink>
+                </div>
+                <div className={style.item}>
+                    <NavLink style={{ textDecoration: 'none' }} to='/dialog/2'><Dialog  id='2' /></NavLink>
+                </div>
+                <div className={style.item}>
+                    <NavLink style={{ textDecoration: 'none' }} to='/dialog/3'><Dialog  id='3' /></NavLink>
                 </div>
             </div>
         </div>

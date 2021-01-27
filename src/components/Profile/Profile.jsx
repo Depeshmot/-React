@@ -3,14 +3,11 @@ import MyPosts from './MyPosts/MyPosts';
 import style from '../Profile/Profile.module.css';
 import Banner from '../Profile/Banner/Banner';
 
-const Profile = (props) => {
-
+const Profile = () => {
     return(
         <div className={style.container}> 
         <Banner/>
-        <MyPosts posts={props.profilePage.posts} 
-                newPostText={props.profilePage.newPostText}
-                dispatch={props.dispatch}/>
+        <MyPosts/>
         </div>
     );
 }
