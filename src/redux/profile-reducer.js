@@ -2,22 +2,40 @@ const ADD_POST = 'ADD-POST';
 const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
 
 const profileReducer = (state, action) => {
-    
-    if (action.type === ADD_POST) {
+    switch(action.type) {
+
+        case ADD_POST: 
         let newPost = {
             id: 5,
-            message: this._state.profilePage.newPostText,
+            message: state.newPostText,
             likesCount: 0
         };
     
-        state.newPostText = '';
+        state.newPostText = ''
         state.posts.push(newPost);
+        return state;
         
-    } else if  (action.type === UPDATE_NEW_POST_TEXT) {
+        case UPDATE_NEW_POST_TEXT: 
         state.newPostText = action.newText;
-    } 
+        return state;
+
+    default: 
+        return state;
+    }
+}
+
+export const addPostActionCreator =  () => {
     
-    return state;
+    return{
+        type: ADD_POST
+    }
+}
+
+export const updateNewPostActionCreator = (text) => {
+
+    return {
+        type: UPDATE_NEW_POST_TEXT, newText: text
+    } 
 }
 
 export default profileReducer;
