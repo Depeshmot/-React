@@ -49,7 +49,7 @@ let store = {
     subscribe(observer) {
         this._rerenderEntireTree = observer;
     },
-    dispatch (action){ // {type: 'ADD-POST'}
+    dispatch (action){ // {type: 'ADD-POST'} из UI(экшены) диспатчатся файлы
 
 
     
