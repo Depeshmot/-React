@@ -1,30 +1,29 @@
 import React from 'react';
-import style from '../MyPosts/MyPosts.module.css';
-import Post from './Post/Post.jsx';
 import { addPostActionCreator, updateNewPostActionCreator } from '../../../redux/profile-reducer';
 import MyPosts from './MyPosts';
+import {connect} from 'react-redux';
 
-const MyPostsContainer = (props) => {
+let mapStateToProps = (state) => {
+    return{
+        posts: state.profilePage.posts,
+        newPostText: state.profilePage.newPostText
 
-    let state = props.store.getState();
+    };
+};
 
-    let addPost = () => {
-        props.store.dispatch(addPostActionCreator()); // addPostActionCreator - это функция которая возварщает action она принемает какие то параметры 
-    }
+let mapDispatchToProps = (dispatch) => {
+    return{
+        updateNewPostText: (text) => {
+            let action = updateNewPostActionCreator(text);
+            dispatch(action);
+        },
+        addPost: () => {
+            dispatch(addPostActionCreator());
+        }
+    };
 
-    let onPostChange = (text) => {
-        let action = updateNewPostActionCreator(text);
-        props.store.dispatch(action);
-    }
+};
 
-    return (
-        <MyPosts 
-        updateNewPostText={onPostChange} 
-        addPost={addPost} 
-        posts={state.profilePage.posts}
-        newPostText = {state.profilePage.newPostText}/>
-
-    );
-}
+const MyPostsContainer = connect(mapStateToProps, mapDispatchToProps) (MyPosts);
 
 export default MyPostsContainer; // Задача container component удволитворить нужды presentation component
