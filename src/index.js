@@ -9,7 +9,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 
 
-let rerenderEntireTree = () => {
+
 ReactDOM.render(
     <BrowserRouter>
         <Provider store={store}>
@@ -17,13 +17,7 @@ ReactDOM.render(
         </Provider>
     </BrowserRouter>,
     document.getElementById('root'));
-}
 
-rerenderEntireTree();
-
-store.subscribe(() => {
-    rerenderEntireTree();
-});
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
